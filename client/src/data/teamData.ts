@@ -34,7 +34,7 @@ export const teamData: TeamMember[] = [
     expBadge: '28+ Yrs Exp',
     experience: '30+ Years of Professional Practice',
     email: 'rakesh.singhal@srcaccountants.in',
-    image: '/images/team/rakesh-singhal.png',
+    image: '/images/team/rakesh-singhal.jpg',
     summaryBio: 'With over 30 years of professional experience in practice, Mr. Rakesh Singhal brings with himself vast experience in handling accounting and taxation issues. His areas of expertise include financial planning, tax planning, balance sheet finalisation, accounting and taxation, with a practical approach focused on understanding each client’s specific circumstances and objectives. His extensive experience and professional insight forms a strong foundation for the firm’s commitment to technical excellence, professional integrity and long-term client relationships.',
     specialization: [
       'Financial Planning & Strategic Advisory',

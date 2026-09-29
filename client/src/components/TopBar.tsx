@@ -1,6 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, Mail, Clock, Lock } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 
 export const TopBar: React.FC = () => {
   return (

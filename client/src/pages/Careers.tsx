@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
 import {
-  Phone,
-  Mail,
-  MapPin,
   Upload,
   Send,
-  CheckCircle2,
-  Clock,
-  ShieldCheck
+
 } from 'lucide-react';
-import { GoogleMapEmbed } from '../components/GoogleMapEmbed.js';
+
 
 export const Careers: React.FC = () => {
   const [formData, setFormData] = useState({

@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { ExternalLink, Clock, Search, ArrowUpRight, Bell, PlusCircle } from 'lucide-react';
-import { statutoryCalendarMarch2026 } from '../data/insightsData.js';
+
+import { Clock,ArrowUpRight, } from 'lucide-react';
 import { fetchAllInsights, InsightPost } from '../services/insightsService.js';
 
 export const Insights: React.FC = () => {
   const [posts, setPosts] = useState<InsightPost[]>([]);
-  const [activeCategory, setActiveCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory] = useState('All');
+  const [searchQuery] = useState('');
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -17,7 +16,7 @@ export const Insights: React.FC = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  const categories = ['All', ...Array.from(new Set(posts.map((p) => p.category)))];
+
 
   const filteredPosts = posts.filter((post) => {
     const matchesCategory = activeCategory === 'All' || post.category === activeCategory;

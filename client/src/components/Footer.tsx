@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import { NavLink} from 'react-router-dom';
 
 

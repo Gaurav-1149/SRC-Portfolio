@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle2,
-  Search,
   ArrowRight,
   ShieldCheck,
   Building2,
@@ -17,7 +16,7 @@ import {
 import { servicesData } from '../data/servicesData.js';
 
 export const Services: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery] = useState('');
 
   // Icon mapping helper
   const getIcon = (iconName: string) => {
@@ -49,7 +48,7 @@ export const Services: React.FC = () => {
       {/* Services Grid with Cards & Micro-Services */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service, index) => (
+          {filteredServices.map((service) => (
             <div
               key={service.id}
               className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg hover:border-[#8AC926] transition-all flex flex-col justify-between group"

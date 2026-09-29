@@ -2,13 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight,
-  Shield,
   Award,
   Users,
   CheckCircle2,
   TrendingUp,
   Cpu,
-  Building2,
   ChevronRight,
   Clock,
   Briefcase

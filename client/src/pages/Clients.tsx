@@ -5,7 +5,6 @@ export const Clients: React.FC = () => {
   const [searchTerm] = useState('');
   const [selectedCategory ] = useState('All');
 
-  const categories = ['All', 'Industrial', 'Hospitality', 'Technology', 'Infrastructure', 'Consumer Goods', 'Healthcare'];
 
   const filteredIndustries = industriesData.filter((item) => {
     const matchesSearch =

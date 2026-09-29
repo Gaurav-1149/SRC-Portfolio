@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Mail, ShieldCheck, ArrowRight, Award, User } from 'lucide-react';
+import {  User } from 'lucide-react';
 import { teamData } from '../data/teamData.js';
 
 export const OurTeam: React.FC = () => {
