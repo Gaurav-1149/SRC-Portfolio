@@ -326,9 +326,9 @@ export const Home: React.FC = () => {
               <div className="w-10 h-10 rounded-lg bg-[#8AC926]/20 flex items-center justify-center text-[#8AC926]">
                 <Award className="w-5 h-5 text-[#8AC926]" />
               </div>
-              <h4 className="text-lg font-bold text-white">Big Four & MNC Exposure</h4>
+              <h4 className="text-lg font-bold text-white">Practical & Industry-Oriented Expertise</h4>
               <p className="text-xs text-gray-300 leading-relaxed">
-                Our team brings experience from leading professional firms and MNC environments, adding international perspectives and robust professional practices.
+                Our experience across diverse industries enables us to understand sector-specific requirements and provide practical, commercially relevant solutions tailored to each client’s business.
               </p>
             </div>
 

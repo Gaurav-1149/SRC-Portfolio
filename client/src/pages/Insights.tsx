@@ -67,16 +67,6 @@ export const Insights: React.FC = () => {
                   {post.snippet}
                 </p>
 
-                <div className="flex flex-wrap gap-1.5 pt-2">
-                  {post.tags.map((tag, tIdx) => (
-                    <span
-                      key={tIdx}
-                      className="text-[10px] bg-gray-50 text-gray-600 px-2 py-0.5 rounded border border-gray-200"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
               </div>
 
               {/* Card Footer with TaxGuru External Link */}
