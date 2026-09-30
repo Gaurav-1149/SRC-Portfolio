@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
               <NavLink
                             to="/home"
                           >
-                                  <img src="/images/logo_dark.png" alt="Logo" className='h-28'/>
+                                  <img src="/images/logo_dark.png" alt="Logo" className='h-16'/>
                           </NavLink>
 
             <p className="text-sm text-gray-400 leading-relaxed mt-3">

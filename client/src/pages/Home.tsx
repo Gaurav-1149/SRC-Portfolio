@@ -275,7 +275,7 @@ export const Home: React.FC = () => {
         </div>
           <div className='my-5 flex justify-between '>
             <p className='text-gray-600'>
-            <strong className='text-black'> Also offering: </strong> &nbsp;Virtual CFO Services &nbsp;· &nbsp;Startup & MSME Advisory&nbsp; ·&nbsp; FCRA &nbsp;· &nbsp;FEMA&nbsp; · &nbsp;IEC ·&nbsp; Trademark
+            <strong className='text-black'> Other offerings: </strong> &nbsp;Virtual CFO Services &nbsp;· &nbsp;Startup & MSME Advisory&nbsp; ·&nbsp; FCRA &nbsp;· &nbsp;FEMA&nbsp; · &nbsp;IEC ·&nbsp; Trademark
             </p>
              <Link
                   to="/services"

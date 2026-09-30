@@ -2,7 +2,7 @@ import { Phone, Mail } from 'lucide-react';
 
 export const TopBar: React.FC = () => {
   return (
-    <div className="bg-[#111827] text-gray-300 text-xs py-2 px-4 border-b border-gray-800">
+    <div className="bg-[#111827] text-gray-300 text-xs py-2 px-4 border-b border-gray-800  ">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
         {/* Left segment: Phone, Email, Office Hours */}
         <div className="flex flex-wrap items-center gap-4 sm:gap-6 justify-center sm:justify-start">
@@ -29,7 +29,7 @@ export const TopBar: React.FC = () => {
           <div className="flex items-center space-x-3 border-gray-700 pl-4">
             {/* WhatsApp */}
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919811526208"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-[#8AC926] transition-colors p-1"

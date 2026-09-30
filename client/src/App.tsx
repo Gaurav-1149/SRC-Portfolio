@@ -24,11 +24,13 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-gray-900 font-sans">
-      {/* Top Header Bar */}
-      <TopBar />
-
-      {/* Main Sticky Navbar */}
-      <Navbar />
+      
+      <div className='sticky top-0 z-50'>
+        {/* Top Header Bar */}
+        <TopBar />
+        {/* Main Sticky Navbar */}
+        <Navbar />
+      </div>
 
       {/* Page Routing */}
       <main className="flex-grow">
