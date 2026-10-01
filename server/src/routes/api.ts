@@ -11,6 +11,10 @@ import {
   updateInsight,
   deleteInsight,
 } from '../controllers/insightsController.js';
+import {
+  handleAdminLogin,
+  handleVerifyAdminSession,
+} from '../controllers/authController.js';
 
 const router = Router();
 
@@ -36,6 +40,10 @@ const upload = multer({
 router.post('/contact', handleContactForm);
 router.post('/career', upload.single('resume'), handleCareerForm);
 router.post('/quick-enquiry', handleQuickEnquiry);
+
+// Admin Authentication API
+router.post('/admin/login', handleAdminLogin);
+router.get('/admin/verify', handleVerifyAdminSession);
 
 // Insights Management API
 router.get('/insights', getInsights);

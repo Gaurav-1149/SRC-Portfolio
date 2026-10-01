@@ -52,7 +52,7 @@ A full-stack portfolio and practice management web application built for **Singh
 ## 📧 Form Handling & Email Notifications
 
 All inquiries submitted via `/contactUs`, `/careers`, and the Home page Quick Enquiry banner hit the Express backend:
-- Configured recipient email: **`gauravtcbd8@gmail.com`**
+- Configured recipient email: **`gauravgarg9595@gmail.com`**
 - Supports optional PDF/DOCX resume file upload handled in-memory via `multer` and attached directly to the dispatch email.
 - Fallback safe logging: in development environments without SMTP credentials, submissions are logged cleanly to the terminal without throwing server errors.
 
@@ -69,13 +69,12 @@ All inquiries submitted via `/contactUs`, `/careers`, and the Home page Quick En
 cd ca-firm-website/server
 npm install
 cp .env.example .env
-# Edit .env with your SMTP credentials if live emailing is desired:
-# SMTP_USER=your_email@gmail.com
-# SMTP_PASS=your_app_password
-# RECEIVER_EMAIL=gauravtcbd8@gmail.com
+# Edit .env with your Resend API credentials:
+# RESEND_API_KEY=your_resend_api_key
+# RECEIVER_EMAIL=gauravgarg9595@gmail.com
 
 npm run dev
-# Server runs on http://localhost:5000
+# Server runs on http://localhost:5001
 ```
 
 ### 2. Frontend Setup

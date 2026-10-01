@@ -11,36 +11,36 @@ import { GoogleMapEmbed } from '../components/GoogleMapEmbed.js';
 
 export const ContactUs: React.FC = () => {
   const [contactData, setContactData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     phone: '',
-    subject: 'Statutory Audit Scoping',
+    subject: '',
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [statusMessage, setStatusMessage] = useState<{ success?: boolean; text?: string } | null>(null);
-
-  const contactSubjects = [
-    'Statutory Audit Scoping (Companies Act 2013)',
-    'Corporate Tax Planning & Assessments',
-    'GST Scrutiny, Audit & Tribunal Appeals',
-    'Transfer Pricing Study & 15CA/15CB Certifications',
-    'Virtual CFO & Accounting Outsourcing',
-    'Company Incorporation / LLP Setup',
-    'FCRA & NGO Regulatory Compliance',
-    'General Consultation'
-  ];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setStatusMessage(null);
 
+    const fullName = `${contactData.firstName} ${contactData.lastName}`.trim() || contactData.firstName || contactData.lastName;
+
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(contactData),
+        body: JSON.stringify({
+          name: fullName,
+          firstName: contactData.firstName,
+          lastName: contactData.lastName,
+          email: contactData.email,
+          phone: contactData.phone,
+          subject: contactData.subject || 'General Consultation Inquiry',
+          message: contactData.message,
+        }),
       });
 
       const data = await res.json();
@@ -50,10 +50,11 @@ export const ContactUs: React.FC = () => {
           text: data.message || 'Thank you! Your message has been safely delivered to our partner inbox.',
         });
         setContactData({
-          name: '',
+          firstName: '',
+          lastName: '',
           email: '',
           phone: '',
-          subject: 'Statutory Audit Scoping',
+          subject: '',
           message: '',
         });
       } else {
@@ -65,7 +66,7 @@ export const ContactUs: React.FC = () => {
     } catch {
       setStatusMessage({
         success: true,
-        text: 'Inquiry submitted successfully! A notification was sent to gauravtcbd8@gmail.com.',
+        text: 'Inquiry submitted successfully! A notification was sent to gauravgarg9595@gmail.com.',
       });
     } finally {
       setIsSubmitting(false);
@@ -204,77 +205,79 @@ export const ContactUs: React.FC = () => {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div>
-                <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                  Full Name *
-                </label>
-                <input
-                  type="text"
-                  required
-                  value={contactData.name}
-                  onChange={(e) => setContactData({ ...contactData, name: e.target.value })}
-                  placeholder="e.g. Rajesh Singhania"
-                  className="w-full text-sm px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#8AC926]"
-                />
-              </div>
-
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {/* First Name */}
                 <div>
-                  <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                    Official Email *
-                  </label>
+                  <input
+                    type="text"
+                    required
+                    value={contactData.firstName}
+                    onChange={(e) => setContactData({ ...contactData, firstName: e.target.value })}
+                    placeholder="First Name"
+                    className="w-full text-sm px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#8AC926] bg-white text-gray-800 placeholder-gray-400"
+                  />
+                </div>
+
+                {/* Last Name */}
+                <div>
+                  <input
+                    type="text"
+                    required
+                    value={contactData.lastName}
+                    onChange={(e) => setContactData({ ...contactData, lastName: e.target.value })}
+                    placeholder="Last Name"
+                    className="w-full text-sm px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#8AC926] bg-white text-gray-800 placeholder-gray-400"
+                  />
+                </div>
+
+                {/* Email Address */}
+                <div>
                   <input
                     type="email"
                     required
                     value={contactData.email}
                     onChange={(e) => setContactData({ ...contactData, email: e.target.value })}
-                    placeholder="abc@gmail.com"
-                    className="w-full text-sm px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#8AC926]"
+                    placeholder="Email Address"
+                    className="w-full text-sm px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#8AC926] bg-white text-gray-800 placeholder-gray-400"
                   />
                 </div>
+
+                {/* Phone Number */}
                 <div>
-                  <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                    Phone / Mobile *
-                  </label>
                   <input
                     type="tel"
                     required
                     value={contactData.phone}
                     onChange={(e) => setContactData({ ...contactData, phone: e.target.value })}
-                    placeholder="+91 98765 43210"
-                    className="w-full text-sm px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#8AC926]"
+                    placeholder="Phone Number"
+                    className="w-full text-sm px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#8AC926] bg-white text-gray-800 placeholder-gray-400"
                   />
                 </div>
-              </div>
 
-              <div>
-                <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                  Primary Practice Vertical *
-                </label>
-                <select
-                  value={contactData.subject}
-                  onChange={(e) => setContactData({ ...contactData, subject: e.target.value })}
-                  className="w-full text-sm px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#8AC926] bg-white font-medium"
-                >
-                  {contactSubjects.map((sub, idx) => (
-                    <option key={idx} value={sub}>{sub}</option>
-                  ))}
-                </select>
-              </div>
+                {/* Subject */}
+                <div className="sm:col-span-2">
+                  <input
+                    type="text"
+                    required
+                    value={contactData.subject}
+                    onChange={(e) => setContactData({ ...contactData, subject: e.target.value })}
+                    placeholder="Subject"
+                    className="w-full text-sm px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#8AC926] bg-white text-gray-800 placeholder-gray-400"
+                  />
+                </div>
 
-              <div>
-                <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                  Scope Brief / Challenge Summary *
-                </label>
-                <textarea
-                  rows={5}
-                  required
-                  value={contactData.message}
-                  onChange={(e) => setContactData({ ...contactData, message: e.target.value })}
-                  placeholder="Outline specific statutory requirements, dispute timelines, transaction parameters, or audit scope needed..."
-                  className="w-full text-sm px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#8AC926]"
-                ></textarea>
+                {/* Message */}
+                <div className="sm:col-span-2">
+                  <textarea
+                    rows={5}
+                    required
+                    value={contactData.message}
+                    onChange={(e) => setContactData({ ...contactData, message: e.target.value })}
+                    placeholder="Message"
+                    className="w-full text-sm px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#8AC926] bg-white text-gray-800 placeholder-gray-400 resize-y"
+                  ></textarea>
+                </div>
               </div>
 
               <div className="flex items-start gap-2 bg-gray-50 p-3 rounded-lg border border-gray-200 text-[11px] text-gray-600">

@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { ChevronDown, Menu, X, ArrowUpRight } from 'lucide-react';
+import { QuickQueryModal } from './QuickQueryModal';
 // import {logo} from "../../public/images/logo"
 
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+  const [isQueryModalOpen, setIsQueryModalOpen] = useState(false);
   const location = useLocation();
 
   const isAboutActive = location.pathname.startsWith('/aboutUs');
@@ -141,13 +143,13 @@ export const Navbar: React.FC = () => {
 
           {/* Action Consultation Button */}
           <div className="hidden lg:flex items-center space-x-3">
-            <Link
-              to="/contactUs"
-              className="inline-flex items-center gap-2 border-[#8AC926] border-2 text-gray-950 font-bold px-5 py-2.5 rounded-lg shadow-sm hover:shadow transition-all text-sm group"
+            <button
+              onClick={() => setIsQueryModalOpen(true)}
+              className="inline-flex items-center gap-2 border-[#8AC926] border-2 text-gray-950 font-bold px-5 py-2.5 rounded-lg shadow-sm hover:shadow transition-all text-sm group cursor-pointer"
             >
               <span>Get in touch</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </Link>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -219,17 +221,25 @@ export const Navbar: React.FC = () => {
             Contact Us
           </Link>
           <div className="pt-2">
-            <Link
-              to="/contactUs"
-              onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex justify-center items-center gap-2 bg-[#8AC926] text-black font-bold px-4 py-2.5 rounded-lg text-sm"
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                setIsQueryModalOpen(true);
+              }}
+              className="w-full flex justify-center items-center gap-2 bg-[#8AC926] text-black font-bold px-4 py-2.5 rounded-lg text-sm cursor-pointer"
             >
-              <span>Schedule Consultation</span>
+              <span>Get in touch</span>
               <ArrowUpRight className="w-4 h-4" />
-            </Link>
+            </button>
           </div>
         </div>
       )}
+
+      {/* Quick Query Modal Popup */}
+      <QuickQueryModal
+        isOpen={isQueryModalOpen}
+        onClose={() => setIsQueryModalOpen(false)}
+      />
     </header>
   );
 };
