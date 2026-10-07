@@ -106,13 +106,6 @@ export const industriesData: IndustrySector[] = [
     servicesDelivered: ['Working Capital Audits', 'Statutory Financial Statements', 'Tax Deduction at Source Verification']
   },
   {
-    id: 'automotive-parts',
-    name: 'Gym And Fitness Centers',
-    category: 'Manufacturing',
-    description: 'Brake lining powders, vehicular components manufacturing, OEM supply contract evaluations, and international transfer pricing.',
-    servicesDelivered: ['Transfer Pricing Documentation', 'Subcontracting GST Reconciliation', 'Balance Sheet Finalization']
-  },
-  {
     id: 'education-welfare',
     name: 'Printing And Publishing',
     category: 'Non-Profit',

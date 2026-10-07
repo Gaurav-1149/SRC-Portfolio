@@ -18,24 +18,24 @@ export const Home: React.FC = () => {
   return (
     <div className="space-y-20 lg:space-y-28">
       {/* 1. HERO SECTION */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-gray-950 via-[#111827] to-[#1F2937] text-white py-20 lg:py-18 ">
+      <section className="relative overflow-hidden bg-gradient-to-b from-gray-950 via-[#111827] to-[#1F2937] text-white pt-20 pb-10 lg:py-18 selection:bg-gray-500 selection:text-blue-950">
         
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center ">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center ">
             
             {/* Left Content Column */}
-            <div className="lg:col-span-7 space-y-6 ">
+            <div className="lg:col-span-6 space-y-6 ">
               
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] ">
                 Beyond Compliance. <br />
                 <span >Your Partner in</span> 
-                <span className="text-[#8AC926]"> Business Growth.</span>
+                <span className="text-[#8AC926] selection:text-[#8AC926]"> Business Growth.</span>
               </h1>
 
               <p className="text-lg text-gray-300 max-w-2xl font-normal leading-relaxed">
-                29+ years of professional expertise in Audit, Taxation, Accounting and Advisory — delivering practical solutions tailored to your business.
+                Over 30 years of professional expertise in Audit, Taxation, Accounting and Advisory — delivering practical solutions tailored to your business.
               </p>
 
               {/* Action Buttons */}
@@ -52,8 +52,10 @@ export const Home: React.FC = () => {
               {/* Trust Metric Counters */}
               
             </div>
-
-            {/* Right Hero Image Column */}
+                <div className='h-full lg:col-span-6'>
+                  <img src="/hero_image.png" alt="" className='h-full w-full rounded-xl'/>
+                  </div> 
+              {/* Right Hero Image Column */}
             <div className="lg:col-span-5 relative">
               {/* Ambient Glow Backdrop */}
               <div className="absolute -inset-2 bg-gradient-to-tr from-[#8AC926]/25 via-[#8AC926]/10 to-transparent rounded-3xl blur-2xl -z-10"></div>
@@ -68,7 +70,7 @@ export const Home: React.FC = () => {
 
       {/* 2. ABOUT SRC CHARTERED ACCOUNTANTS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
           <div className="lg:col-span-6 space-y-6">
            
 
@@ -79,7 +81,7 @@ export const Home: React.FC = () => {
 
             <div className="space-y-4 text-gray-600 text-base leading-relaxed text-justify">
               <p>
-                Established in 1997, <strong>Singhal Rakesh & Co.</strong> is a professionally managed Chartered Accountancy firm headquartered in Mianwali Nagar, New Delhi. Over the years, we have built our practice on a foundation of technical expertise, professional integrity and a deep understanding of our clients' businesses.
+                Established in 1997, <strong>Singhal Rakesh & Co.</strong> is a professionally managed Chartered Accountancy firm headquartered in  New Delhi. Over the years, we have built our practice on a foundation of technical expertise, professional integrity and a deep understanding of our clients' businesses.
               </p>
               <p>
                 We offer a comprehensive range of services across Audit & Assurance, Domestic & International Taxation, Accounting, and Corporate & Business Advisory. Our approach is centred on understanding each client's unique requirements and delivering practical, customised solutions that address their specific business needs.
@@ -97,48 +99,8 @@ export const Home: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-6">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-gray-50 border border-gray-200 p-6 rounded-xl hover:border-[#8AC926] transition-colors">
-                <div className="w-10 h-10 rounded-lg bg-[#8AC926]/15 flex items-center justify-center text-[#8AC926] mb-4">
-                  <Award className="w-5 h-5 text-[#8AC926]" />
-                </div>
-                <h4 className="font-bold text-gray-900 text-base mb-1">Fiduciary Integrity</h4>
-                <p className="text-xs text-gray-600 leading-normal">
-                  Strict adherence to statutory compliance standards and the ICAI Code of Ethics.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 border border-gray-200 p-6 rounded-xl hover:border-[#8AC926] transition-colors">
-                <div className="w-10 h-10 rounded-lg bg-[#8AC926]/15 flex items-center justify-center text-[#8AC926] mb-4">
-                  <Cpu className="w-5 h-5 text-[#8AC926]" />
-                </div>
-                <h4 className="font-bold text-gray-900 text-base mb-1">Tech-Driven Audits</h4>
-                <p className="text-xs text-gray-600 leading-normal">
-                  AI-assisted reconciliations, automated ledger checks, and continuous compliance monitors.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 border border-gray-200 p-6 rounded-xl hover:border-[#8AC926] transition-colors">
-                <div className="w-10 h-10 rounded-lg bg-[#8AC926]/15 flex items-center justify-center text-[#8AC926] mb-4">
-                  <Briefcase className="w-5 h-5 text-[#8AC926]" />
-                </div>
-                <h4 className="font-bold text-gray-900 text-base mb-1">Big Four Acumen</h4>
-                <p className="text-xs text-gray-600 leading-normal">
-                  Partners bringing rich background from leading multinational institutions like Deloitte.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 border border-gray-200 p-6 rounded-xl hover:border-[#8AC926] transition-colors">
-                <div className="w-10 h-10 rounded-lg bg-[#8AC926]/15 flex items-center justify-center text-[#8AC926] mb-4">
-                  <Users className="w-5 h-5 text-[#8AC926]" />
-                </div>
-                <h4 className="font-bold text-gray-900 text-base mb-1">Client Centricity</h4>
-                <p className="text-xs text-gray-600 leading-normal">
-                  Personalized attention with direct partner access on critical statutory matters.
-                </p>
-              </div>
-            </div>
+          <div className="lg:col-span-6 h-3/4">
+            <img src="/team.png" alt="" className='h-full w-auto rounded-xl'/>
           </div>
         </div>
       </section>
@@ -306,7 +268,7 @@ export const Home: React.FC = () => {
               <div className="w-10 h-10 rounded-lg bg-[#8AC926]/20 flex items-center justify-center text-[#8AC926]">
                 <Clock className="w-5 h-5 text-[#8AC926]" />
               </div>
-              <h4 className="text-lg font-bold text-white">29+ Years of Professional Experience</h4>
+              <h4 className="text-lg font-bold text-white">Over 30 Years of Professional Experience</h4>
               <p className="text-xs text-gray-300 leading-relaxed">
                 A strong foundation of professional experience across taxation, audit, accounting and business advisory.
               </p>

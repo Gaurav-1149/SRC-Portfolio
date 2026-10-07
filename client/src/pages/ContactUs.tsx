@@ -5,7 +5,9 @@ import {
   Send,
   ShieldCheck,
   Building,
-  Train
+  Train,
+  Phone,
+  Mail
 } from 'lucide-react';
 import { GoogleMapEmbed } from '../components/GoogleMapEmbed.js';
 
@@ -97,104 +99,53 @@ export const ContactUs: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           
           {/* Left Portion: Structured Chambers Contact Cards & Transit */}
-          <div className="lg:col-span-5 space-y-6">
+          <div className="lg:col-span-4 space-y-6 ">
             
             {/* Direct Lines */}
-            <div className="bg-white p-7 rounded-2xl border border-gray-200 shadow-sm space-y-4">
+            <div className="bg-white p-7 rounded-2xl border border-gray-200 shadow-sm space-y-4 ">
               <div className="border-b border-gray-100 pb-3">
-                <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#8AC926]">
-                  Chambers Communications
-                </span>
-                <h3 className="text-lg font-bold text-gray-900 mt-1">Direct Lines & Desks</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mt-1">Contact Info</h3>
               </div>
 
-              <div className="space-y-3.5 text-xs">
+              <div className="space-y-6 text-s">
                 <div>
-                  <div className="text-gray-500 font-medium">Senior Advisory & Board Desk:</div>
-                  <a href="tel:+911145678900" className="text-gray-950 font-bold hover:text-[#8AC926] text-sm block">
-                    +91 (11) 4567-8900
-                  </a>
-                  <div className="text-[11px] text-gray-400">Delhi Hunting PRI Lines (Connaught Place)</div>
+                 <a
+                href="tel:+919811526208"
+                className="flex items-center gap-5 hover:text-[#8AC926] transition-colors"
+              >
+                <Phone className=" text-[#8AC926]" />
+                <span>+91 9811526208</span>
+              </a>
+
                 </div>
 
                 <div className="border-t border-gray-100 pt-3">
-                  <div className="text-gray-500 font-medium">Partner Direct Consultation Line:</div>
-                  <a href="tel:+919876543210" className="text-gray-950 font-bold hover:text-[#8AC926] text-sm block">
-                    +91 98765 43210
-                  </a>
-                  <div className="text-[11px] text-gray-400">Designated for urgent statutory Tribunal filings</div>
+                  <a
+                  href="mailto:rakeshca.singhal25@gmail.com"
+                  className="flex items-center gap-5 hover:text-[#8AC926] transition-colors"
+                >
+                  <Mail className=" text-[#8AC926]" />
+                  <span>rakeshca.singhal25@gmail.com</span>
+              </a>
                 </div>
 
                 <div className="border-t border-gray-100 pt-3">
-                  <div className="text-gray-500 font-medium">Official Chambers Email:</div>
-                  <a href="mailto:contact@srcaccountants.in" className="text-gray-950 font-bold hover:text-[#8AC926] text-sm block">
-                    contact@srcaccountants.in
-                  </a>
-                  <div className="text-[11px] text-gray-400">Enterprise mail inbox for statutory turnaround</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Physical Chambers */}
-            <div className="bg-white p-7 rounded-2xl border border-gray-200 shadow-sm space-y-4">
-              <div className="border-b border-gray-100 pb-3">
-                <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#8AC926]">
-                  Chambers Locations
-                </span>
-                <h3 className="text-lg font-bold text-gray-900 mt-1">Head Chambers & HQ</h3>
-              </div>
-
-              <div className="space-y-4 text-xs text-gray-700">
-                <div className="flex items-start gap-2.5">
-                  <Building className="w-4 h-4 text-[#8AC926] shrink-0 mt-0.5" />
-                  <div>
-                    <strong>Connaught Place Chambers:</strong>
-                    <p className="mt-0.5 text-gray-600">
-                      Suite 408-412, Mercantile Commercial Towers, Barakhamba Road, Connaught Place, New Delhi - 110001
-                    </p>
-                    <span className="text-[11px] text-gray-400 block mt-0.5">
-                      Landmark: Adjacent to Barakhamba Metro Station (Gate 2)
+                   <div className="flex items-start gap-5">
+                    <MapPin className=" text-[#8AC926] shrink-0 mt-0.5" />
+                    <span>
+                        301-302, S.G. Plaza, Opp. Richmond Global School, Inder Enclave, Mianwali Nagar, New Delhi-110087
                     </span>
                   </div>
                 </div>
-
-                <div className="flex items-start gap-2.5 border-t border-gray-100 pt-3">
-                  <MapPin className="w-4 h-4 text-[#8AC926] shrink-0 mt-0.5" />
-                  <div>
-                    <strong>Headquarters:</strong>
-                    <p className="mt-0.5 text-gray-600">
-                      Mianwali Nagar, Paschim Vihar, New Delhi - 110087, India
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-2.5 border-t border-gray-100 pt-3">
-                  <Clock className="w-4 h-4 text-[#8AC926] shrink-0 mt-0.5" />
-                  <div>
-                    <strong>Visiting Hours:</strong>
-                    <p className="mt-0.5 text-gray-600">
-                      Monday to Saturday: 9:30 AM to 6:30 PM (IST)
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
 
-            {/* Metro Transit Guide */}
-            <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200 space-y-3 text-xs">
-              <div className="flex items-center gap-2 font-bold text-gray-900 uppercase tracking-wider">
-                <Train className="w-4 h-4 text-[#8AC926]" />
-                <span>Visitor Transit Guide</span>
-              </div>
-              <p className="text-gray-600 leading-relaxed">
-                <strong>Delhi Metro Network:</strong> Blue Line – Barakhamba Road Station (Gate No. 2), exactly 200 meters pedestrian distance. Dedicated visitor concierge on 4th Floor.
-              </p>
-            </div>
+            
 
           </div>
 
           {/* Right Portion: Consultation & Inquiry Form */}
-          <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-2xl border border-gray-200 shadow-sm space-y-6">
+          <div className="lg:col-span-8 bg-white p-8 sm:p-10 rounded-2xl border border-gray-200 shadow-sm space-y-6">
             <div className="border-b border-gray-100 pb-4">
               <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#8AC926]">
                 Formal Statutory Inquiry
