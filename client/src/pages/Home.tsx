@@ -18,7 +18,7 @@ export const Home: React.FC = () => {
   return (
     <div className="space-y-20 lg:space-y-28">
       {/* 1. HERO SECTION */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-gray-950 via-[#111827] to-[#1F2937] text-white pt-20 pb-10 lg:py-18 selection:bg-gray-500 selection:text-blue-950">
+      <section className="relative overflow-hidden bg-gradient-to-b from-gray-950 via-[#111827] to-[#1F2937] text-white pt-20 pb-10 lg:py-18 selection:bg-gray-500 selection:text-white">
         
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
@@ -93,7 +93,7 @@ export const Home: React.FC = () => {
                 to="/aboutUs/ourTeam"
                 className="inline-flex items-center gap-2 bg-black hover:bg-gray-800 text-white font-semibold px-6 py-3 rounded-lg transition-all text-sm group"
               >
-                <span>Meet Our Leadership Team</span>
+                <span className='selection:bg-gray-500 selection:text-white'>Meet Our Leadership Team</span>
                 <ChevronRight className="w-4 h-4 text-[#8AC926] group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -251,7 +251,7 @@ export const Home: React.FC = () => {
       </section>
 
       {/* 5. WHY CHOOSE US (What Sets Us Apart) */}
-      <section className="bg-[#111827] text-white py-20">
+      <section className="bg-[#111827] text-white py-20 selection:bg-gray-500 selection:text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
             
@@ -327,7 +327,7 @@ export const Home: React.FC = () => {
 
           <div className="mt-14 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border border-[#8AC926]/40 rounded-2xl p-8 text-center max-w-3xl mx-auto space-y-3">
             <h3 className="text-2xl font-bold text-white">
-              "Your business evolves. <span className="text-[#8AC926]">So do we.</span>"
+              "Your business evolves. <span className="text-[#8AC926] selection:text-[#8AC926]">So do we.</span>"
             </h3>
             <p className="text-xs text-gray-300">
               We continuously invest in professional knowledge, technology, and capabilities to stay aligned with changing regulations, economic environments, and client needs.
@@ -356,7 +356,7 @@ export const Home: React.FC = () => {
             href="mailto:rakeshca.singhal25@gmail.com"
             className="flex items-center gap-1.5 hover:text-[#8AC926] transition-colors"
           >
-            <span>rakeshca.singhal25@gmail.com</span>
+            <span className='selection:bg-gray-500 selection:text-white'>rakeshca.singhal25@gmail.com</span>
           </a>
             </Link>
             <a

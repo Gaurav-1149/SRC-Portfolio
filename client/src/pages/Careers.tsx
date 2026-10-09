@@ -102,14 +102,14 @@ export const Careers: React.FC = () => {
   return (
     <div className="space-y-16 py-12">
       {/* Header Banner */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 selection:bg-gray-500 selection:text-white">
         <div className="bg-[#111827] text-white rounded-3xl p-8 sm:p-14 relative overflow-hidden border border-gray-800">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs uppercase font-extrabold tracking-wider text-black bg-[#8AC926] px-3 py-1 rounded">
               Career & Articleship Opportunities
             </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
-              Build Your Professional Career at <span className="text-[#8AC926]">SRC</span>
+              Build Your Professional Career at <span className="text-[#8AC926] selection:text-[#8AC926]">SRC</span>
             </h1>
             <p className="text-gray-300 text-base leading-relaxed">
               If you aspire to build a rewarding career in a dynamic professional environment that encourages continuous learning, professional growth and career advancement, Singhal Rakesh & Co. welcomes you to join our team.

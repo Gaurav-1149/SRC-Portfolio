@@ -8,18 +8,16 @@ import { GoogleMapEmbed } from './GoogleMapEmbed.js';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#111827] text-gray-300 border-t border-gray-800 pt-16 pb-12">
+    <footer className="bg-[#111827] text-gray-300 border-t border-gray-800 pt-16 pb-12 selection:bg-gray-500 selection:text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 5 Distinct Segments */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6 pb-12 border-b border-gray-800">
           
           {/* Segment 1: Logo & Small Description */}
           <div className="lg:col-span-1 space-y-4">
-              <NavLink
-                            to="/home"
-                          >
-                                  <img src="/images/logo_dark.png" alt="Logo" className='h-16'/>
-                          </NavLink>
+              <NavLink to="/home">
+                      <img src="/images/logo_dark2.png" alt="Logo" className='h-16'/>
+              </NavLink>
 
             <p className="text-sm text-gray-400 leading-relaxed mt-3">
               Singhal Rakesh & Co. (SRC) is a premier Chartered Accountancy firm delivering 29+ years of technical excellence in Audit, Taxation, Accounting and Corporate Advisory.

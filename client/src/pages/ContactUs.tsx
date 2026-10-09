@@ -78,17 +78,14 @@ export const ContactUs: React.FC = () => {
   return (
     <div className="space-y-16 py-12">
       {/* Header Banner */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 selection:bg-gray-500 selection:text-white">
         <div className="bg-[#111827] text-white rounded-3xl p-8 sm:p-14 relative overflow-hidden border border-gray-800">
           <div className="max-w-3xl space-y-4">
-            <span className="text-xs uppercase font-extrabold tracking-wider text-black bg-[#8AC926] px-3 py-1 rounded">
-              Confidential Consultation & Scoping
-            </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
-              Connect With <span className="text-[#8AC926]">Singhal Rakesh & Co.</span>
+              Connect With <span className="text-[#8AC926]  selection:text-[#8AC926]">Singhal Rakesh & Co.</span>
             </h1>
             <p className="text-gray-300 text-base leading-relaxed">
-              Institutional-grade statutory audit, direct tax governance, transfer pricing defense, and strategic corporate advisory tailored to enterprises, multinational corporations, and private family offices.
+              Partner with us for comprehensive solutions in audit, taxation, transfer pricing, and corporate advisory. We work with businesses across industries to address complex financial and regulatory matters through practical, tailored professional services.
             </p>
           </div>
         </div>
@@ -147,12 +144,9 @@ export const ContactUs: React.FC = () => {
           {/* Right Portion: Consultation & Inquiry Form */}
           <div className="lg:col-span-8 bg-white p-8 sm:p-10 rounded-2xl border border-gray-200 shadow-sm space-y-6">
             <div className="border-b border-gray-100 pb-4">
-              <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#8AC926]">
-                Formal Statutory Inquiry
-              </span>
-              <h2 className="text-2xl font-bold text-gray-950 mt-1">Direct Partner Scoping & Case Brief</h2>
+              <h2 className="text-2xl font-bold text-gray-950 mt-1">Have a Query? Get in Touch.</h2>
               <p className="text-xs text-gray-500 mt-1">
-                Complete the schedule below to initiate scoping. Information is governed by privileged advocate-client statutory confidentiality covenants.
+                Our team is available to understand your requirements and assist you with the right professional solutions.
               </p>
             </div>
 
@@ -231,13 +225,6 @@ export const ContactUs: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-2 bg-gray-50 p-3 rounded-lg border border-gray-200 text-[11px] text-gray-600">
-                <ShieldCheck className="w-4 h-4 text-[#8AC926] shrink-0 mt-0.5" />
-                <span>
-                  I understand and affirm that this communication is bound by statutory confidentiality, strict data protection protocols, and the ICAI Code of Ethics nondisclosure covenants.
-                </span>
-              </div>
-
               {statusMessage && (
                 <div
                   className={`p-4 rounded-lg text-xs font-medium ${
@@ -260,7 +247,7 @@ export const ContactUs: React.FC = () => {
                 ) : (
                   <>
                     <Send className="w-4 h-4" />
-                    <span>Submit Inquiry & Request Scoping Call</span>
+                    <span>Submit Inquiry</span>
                   </>
                 )}
               </button>
@@ -274,10 +261,6 @@ export const ContactUs: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
         <div className="border-t border-gray-200 pt-8 flex items-center justify-between">
           <div>
-            <h3 className="text-lg font-bold text-gray-900">Head Chambers Access: Barakhamba Road</h3>
-            <p className="text-xs text-gray-500">
-              Connaught Place financial district, Delhi with reserved client valet parking
-            </p>
           </div>
           <div className="text-xs font-semibold text-gray-600">
             Open in Maps &amp; Navigation

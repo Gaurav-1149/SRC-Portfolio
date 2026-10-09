@@ -116,14 +116,14 @@ export const QuickQueryModal: React.FC<QuickQueryModalProps> = ({ isOpen, onClos
         </button>
 
         {/* Header matching SRC deep black with green accent */}
-        <div className="bg-[#111827] text-white px-7 py-6 rounded-t-2xl border-b border-gray-800">
-          <span className="text-[10px] uppercase font-extrabold tracking-wider text-black bg-[#8AC926] px-2.5 py-0.5 rounded">
+        <div className="bg-[#111827] text-white px-7 py-6 rounded-t-2xl border-b border-gray-800 ">
+          <span className="text-[10px] uppercase font-extrabold tracking-wider text-black bg-[#8AC926] px-2.5 py-0.5 rounded ">
             Fast Track
           </span>
-          <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight mt-2">
-            Quick <span className="text-[#8AC926]">Query</span>
+          <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight mt-2 selection:bg-gray-500 selection:text-white">
+            Quick <span className="text-[#8AC926] selection:text-[#8AC926]">Query</span>
           </h3>
-          <p className="text-xs sm:text-sm text-gray-400 mt-1">
+          <p className="text-xs sm:text-sm text-gray-400 mt-1 selection:bg-gray-500 selection:text-white">
             Our advisory team will respond within 24 business hours.
           </p>
         </div>
