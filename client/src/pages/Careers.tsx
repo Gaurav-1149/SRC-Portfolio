@@ -116,7 +116,7 @@ export const Careers: React.FC = () => {
             </p>
             <p>For career opportunities, drop your resume at rakeshca.singhal25@gmail.com
             <p>
-              or You can also reach us at +91-9811526208
+              or You can also reach us at +91-7988024122
             </p>
             </p>
           </div>

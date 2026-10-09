@@ -7,11 +7,11 @@ export const TopBar: React.FC = () => {
         {/* Left segment: Phone, Email, Office Hours */}
         <div className="flex flex-wrap items-center gap-4 sm:gap-6 justify-center sm:justify-start">
           <a
-            href="tel:+919811526208"
+            href="tel:+917988024122"
             className="flex items-center gap-1.5 hover:text-[#8AC926] transition-colors"
           >
             <Phone className="w-3.5 h-3.5 text-[#8AC926]" />
-            <span>+91 9811526208</span>
+            <span>+91 7988024122</span>
           </a>
             <a
               href="mailto:rakeshca.singhal25@gmail.com"

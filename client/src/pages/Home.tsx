@@ -360,10 +360,10 @@ export const Home: React.FC = () => {
           </a>
             </Link>
             <a
-              href="tel:+91 9811526208"
+              href="tel:+91 7988024122"
               className="bg-white hover:bg-gray-100 text-black font-bold px-6 py-3.5 rounded-lg shadow transition-all text-sm"
             >
-              Call +91 9811526208
+              Call +91 7988024122
             </a>
           </div>
         </div>

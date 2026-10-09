@@ -107,11 +107,11 @@ export const ContactUs: React.FC = () => {
               <div className="space-y-6 text-s">
                 <div>
                  <a
-                href="tel:+919811526208"
+                href="tel:+917988024122"
                 className="flex items-center gap-5 hover:text-[#8AC926] transition-colors"
               >
                 <Phone className=" text-[#8AC926]" />
-                <span>+91 9811526208</span>
+                <span>+91 7988024122</span>
               </a>
 
                 </div>
